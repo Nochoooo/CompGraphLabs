@@ -30,7 +30,7 @@ ___
 
 
 ### Условия соревнования:
-##### [Соревнование Learning Agency Lab - Automated Essay Scoring 2.0](https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2)
+<a href="https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2" style="font-size:1.2em;">Соревнование Learning Agency Lab - Automated Essay Scoring 2.0</a>
 - 2 апреля 2024 г. начало соревнования
 - 25 июня 2024 г. крайний срок подачи заявок и объединения команд
 - 2 июля 2024 г. конец соревнования
@@ -80,11 +80,13 @@ Essay_app/                    # Корневой каталог проекта
 ```
 ---
 ### Инструкции по запуску
-Предварительные условия:
+<span style="font-family:Times New Roman; font-size:1.2em;"> Предварительные условия:</span>
+
 - Docker: убедитесь, что Docker установлен в вашей системе. Вы можете скачать его [отсюда](https://www.docker.com/products/docker-desktop/)
 - Kubernetes: вам необходим будет kubectl (для управления кластером) и minikube (кластер из одной ноды). Все это можно скачать [отсюда](https://kubernetes.io/docs/home/)
 
-Пошаговые инструкции:
+<span style="font-family:Times New Roman; font-size:1.2em;"> Пошаговые инструкции: </span>
+
 1. Клонируйте репозиторий.
 ```bash
 git clone https://github.com/Nochoooo/Essay_app.git
@@ -95,8 +97,7 @@ docker build -t {имя пользователя docker hub}/essay-app:v1 {пу�
 ```
 &nbsp;&nbsp;&nbsp;<span style="font-size: 0.75em;"># В файле app_deploy.yaml вам необходимо будет изменить название образа на "image: {имя пользователя docker hub}/essay-app:v1".<br>
 </span>
-&nbsp;&nbsp;&nbsp;<span style="font-size: 0.75em;"># Созданный image можно посмотреть с помощью команды: "docker images".
-</span>
+
 3. Запуште образ на Docker Hub.
 ```
 docker push {имя пользователя docker hub}/essay-app:v1
@@ -105,7 +106,6 @@ docker push {имя пользователя docker hub}/essay-app:v1
 ```
 minikube start
 ```
-&nbsp;&nbsp;&nbsp;<span style="font-size: 0.75em;"># Созданные сущности kubernetes можете посмотреть с помощью команды kubectl get all</span>
 5. Примените манифесты Kubernetes.
 ```
 kubectl apply -f {путь к папке .kube}
